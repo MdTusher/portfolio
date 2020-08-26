@@ -13,7 +13,7 @@ body {
 #main-message {
     text-align: center;
     background-color: #e68a00;
-	color: #4d0000
+	color: #4d0000;
 }
 #links a {
 	color: #4d1300;
@@ -29,7 +29,7 @@ body {
 	float:right;
 	width:40%;
 	color: black;
-	box-sizing: border-box;;
+	box-sizing: border-box;
 }
 #main-footer {
 	
