@@ -1,0 +1,39 @@
+body {
+    background-color: #ffc266;
+    color: #4d0000 ;
+    font: 17px Arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+	margin: 0;
+}
+.container{
+    width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+#main-message {
+    text-align: center;
+    background-color: #e68a00;
+	color: #4d0000
+}
+#links a {
+	color: #4d1300;
+	padding-right: 17px;
+}
+#view-port {
+	float:left;
+	width: 60%;
+    box-sizing: border-box;
+    text-align: center;
+}
+#side-view{
+	float:right;
+	width:40%;
+	color: black;
+	box-sizing: border-box;;
+}
+#main-footer {
+	
+	text-align: center;
+	padding: 15px;
+	margin-top: 250px;
+}
