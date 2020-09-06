@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+       body{
+           background-color: rgb(16, 20, 20);
+
+       }
+       .first{
+           color: whitesmoke;
+       }
+       .img{
+           
+           
+           
+           border-radius: 30%;
+       }
+       .info{
+           padding-right: 70%;
+           float: right;
+           color: whitesmoke;
+       }
+       hr{
+
+    border: black solid 3px;
+    width: 100%;
+    margin: 20px auto;
+    border-bottom: none;
+
+       }
+   </style>
+    <title>Rendering HTML File</title>
+</head>
+<body>
+    <button id="button">Show Data</button>
+    <br>
+   <div class="first">
+    <h1>List of GitHub Users</h1>
+   </div>
+    <div id="users"></div>
+
+    <script>
+        document.getElementById('button').addEventListener('click', showData);
+        function showData() {
+            var req = new XMLHttpRequest();
+            req.open('GET', 'https://api.github.com/users', true);
+            req.onload = function(){
+                if(req.status==200){
+                    var users = JSON.parse(req.responseText);
+                    var display ='';
+                    for (var i in users){
+                        display += 
+                        '<img class="img" src = "'+users[i].avatar_url+'" width="150px" height="150px">'+
+                           '<div class="info">'+
+                            '<ul>' +
+
+                            '<li><h3>ID : '+users[i].id+'</h3></li>'+
+                            
+                           '<li><h3>Name : '+users[i].login+'</h3></li>'+
+                            
+
+                            '</ul><hr>'+
+                            '</div><hr>';
+
+
+
+                    }
+                    document.getElementById('users').innerHTML=display;
+                }
+            }
+            req.send();
+        }
+    </script>
+    
+</body>
+</html>
